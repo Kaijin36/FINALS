@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .logo img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+header .logo h2 {
+    color: #fff; 
+    font-size: 24px; 
+    text-transform: uppercase;
+    font-weight: 700; 
+    letter-spacing: 1px;
+}
+
+header .navigation {
+    display: flex;
+    align-items: center;
+}
+
+header .navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+header .navigation a:not(:last-child) {
+    margin-right: 15px;
+}
+
+header .navigation a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.products {
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.products::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(Pics/bg.jpg) no-repeat center center/cover;
+    filter: blur(4.5px);
+    z-index: 0;
+}
+
+.products::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.products > * {
+    position: relative;
+    z-index: 2;
+}
+
+.products-header {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff; 
+}
+
+.products-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.products-header p {
+    font-size: 1.2em;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1em;
+    color: #333;
+}
+
+.content {
+    max-width: 80%;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}

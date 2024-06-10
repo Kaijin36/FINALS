@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    position: relative; 
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .logo img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+header .navigation {
+    display: flex;
+    align-items: center;
+}
+
+header .navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+header .navigation a:not(:last-child) {
+    margin-right: 15px;
+}
+
+header .navigation a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact {
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(Pics/bg.jpg) no-repeat center center/cover;
+    filter: blur(4.5px);
+    z-index: -1;
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.contact-container {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Add margin below the cards */
+}
+
+.group-photo {
+    width: 100%;
+    max-width: 600px; /* Adjusted max-width to be smaller */
+    height: auto; /* Ensures the image maintains aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjusted width for better layout */
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.card p {
+    font-size: 1em;
+    color: inherit;
+    transition: color 0.3s ease;
+}
